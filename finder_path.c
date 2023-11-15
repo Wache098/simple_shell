@@ -1,4 +1,4 @@
-#include "header.h"
+#include "shell.h"
 /**
  * path_cmd - Search in $PATH for executable command
  * @cmd: Parsed input

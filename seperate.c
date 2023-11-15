@@ -1,4 +1,4 @@
-#include "header.h"
+#include "shell.h"
 
 /**
  * separator - differentiate command recieved from stdin by ;
