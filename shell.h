@@ -58,31 +58,6 @@ char *_strtok(char *str, const char *delim);
 int history(char *input);
 char **separator(char *input);
 
-/******** ENVIRONMENT HANDLERS ******/
-
-/**
- * dis_env - Displays the environment variables
- * @cmd: An array of strings containing the command and its arguments
- *
- * Return: Always returns 0
- */
-int dis_env(char **cmd)
-{
-    /* Function code here */
-}
-
-/**
- * history_dis - Displays the history of commands
- * @c: An array of strings containing the command and its arguments
- * @st: An integer representing the status
- *
- * Return: Always returns 0
- */
-int history_dis(char **c, int st)
-{
-    /* Function code here */
-}
-
 /****** FILE ARGUMENT HANDLER FUNCTIONS ******/
 
 void read_file(char *file, char **argv);
