@@ -2,28 +2,28 @@
 
 /**
  * _strcmp - funct that differs two strings
- * @s1: string 1
- * @s2: string 2
+ * @l1: string 1
+ * @l2: string 2
  * Return: 0 if same otherwise how much diffrence
  */
 int _strcmp(char *s1, char *s2)
 {
 	int cmp = 0, i, len1, len2;
 
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
+	len1 = _strlen(l1);
+	len2 = _strlen(l2);
 
-	if (s1 == NULL || s2 == NULL)
+	if (l1 == NULL || l2 == NULL)
 		return (1);
 
 	if (len1 != len2)
 		return (1);
 
-	for (i = 0; s1[i]; i++)
+	for (i = 0; l1[i]; i++)
 	{
-		if (s1[i] != s2[i])
+		if (l1[i] != l2[i])
 		{
-			cmp = s1[i] - s2[i];
+			cmp = l1[i] - l2[i];
 			break;
 		}
 		else
@@ -35,12 +35,12 @@ int _strcmp(char *s1, char *s2)
 
 /**
  * _isalpha - function to check if c is alphabet
- * @c: character to check
+ * @a: character to check
  * Return: 1 if pass 0 if fail
  */
-int _isalpha(int c)
+int _isalpha(int a)
 {
-	if (((c >= 97) && (c <= 122)) || ((c >= 65) && (c <= 90)))
+	if (((a >= 97) && (a <= 122)) || ((a >= 65) && (a <= 90)))
 	{
 		return (1);
 	}
@@ -52,15 +52,15 @@ int _isalpha(int c)
 
 /**
  * _itoa - funciton that change integer to character
- * @n: integer to change
+ * @t: integer to change
  * Return: character pointer
  */
-char *_itoa(unsigned int n)
+char *_itoa(unsigned int t)
 {
 	int len = 0, i = 0;
 	char *s;
 
-	len = intlen(n);
+	len = intlen(t);
 	s = malloc(len + 2);
 
 	if (!s)
@@ -70,14 +70,14 @@ char *_itoa(unsigned int n)
 	}
 	*s = '\0';
 
-	while (n / 10)
+	while (t / 10)
 	{
-		s[i] = (n % 10) + '0';
-		n /= 10;
+		s[i] = (t % 10) + '0';
+		t /= 10;
 		i++;
 	}
 
-	s[i] = (n % 10) + '0';
+	s[i] = (t % 10) + '0';
 	array_rev(s, len);
 	s[i + 1] = '\0';
 
